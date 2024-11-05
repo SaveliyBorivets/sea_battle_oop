@@ -1,0 +1,3 @@
+/home/homie/CLionProjects/naval_warfare/cmake-build-debug/CMakeFiles/naval_warfare.dir
+/home/homie/CLionProjects/naval_warfare/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/homie/CLionProjects/naval_warfare/cmake-build-debug/CMakeFiles/rebuild_cache.dir

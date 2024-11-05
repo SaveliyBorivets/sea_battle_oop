@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/main.cpp.o -c /home/homie/CLionProjects/naval_warfare/main.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/main.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/main.cpp.o"
+},
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship.cpp.o -c /home/homie/CLionProjects/naval_warfare/ship.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/ship.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/ship.cpp.o"
+},
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/gamefield.cpp.o -c /home/homie/CLionProjects/naval_warfare/gamefield.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/gamefield.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/gamefield.cpp.o"
+},
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o -c /home/homie/CLionProjects/naval_warfare/ship_manager.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/ship_manager.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/ship_manager.cpp.o"
+},
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/shippart.cpp.o -c /home/homie/CLionProjects/naval_warfare/shippart.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/shippart.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/shippart.cpp.o"
+},
+{
+  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/cell.cpp.o -c /home/homie/CLionProjects/naval_warfare/cell.cpp",
+  "file": "/home/homie/CLionProjects/naval_warfare/cell.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/cell.cpp.o"
+}
+]
