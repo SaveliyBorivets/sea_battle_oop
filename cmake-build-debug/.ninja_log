@@ -1,0 +1,9 @@
+# ninja log v5
+5	651	1728562099316614492	CMakeFiles/naval_warfare.dir/gamefield.cpp.o	a8c478335f0a771c
+0	32	1730666428988699854	build.ninja	5393d47891701d52
+6	396	1728562099060613832	CMakeFiles/naval_warfare.dir/cell.cpp.o	7d398d82c3fff321
+3	361	1728462542192295205	CMakeFiles/naval_warfare.dir/shippart.cpp.o	d0e017610e61f8c3
+3	445	1728571410587342242	CMakeFiles/naval_warfare.dir/ship.cpp.o	154aa1775fd66d0c
+2	641	1728573447411991734	CMakeFiles/naval_warfare.dir/main.cpp.o	846d7439706297ff
+641	758	1728573447527990417	naval_warfare	7c22ca5000689
+2	718	1728572389122028408	CMakeFiles/naval_warfare.dir/ship_manager.cpp.o	159785799dc56b91
