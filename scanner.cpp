@@ -13,7 +13,6 @@ void Scanner::use(pair<int, int> coords, Gamefield* gamefield) {
       for (int x = coords.first; x <= coords_right_down.first; x++) {
         if (gamefield->prove_shipcell({x, y})) {
           cout << "По координатам {" << x << ", " << y << "} найден сегмент корабля\n";
-          return;
         }
       }
     }

@@ -21,6 +21,7 @@ class Ship_Manager {
   Ship_Manager(size_t amount, vector<int> ships_sizes);
   void place_ships_on_field(Gamefield* gamefield);
   void remove_ships_from_field(Gamefield* gamefield);
+  bool update_all_ship_destruction_flags();
   void print_ships_status();
 };
 

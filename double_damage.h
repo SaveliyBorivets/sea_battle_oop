@@ -2,6 +2,7 @@
 #define NAVAL_WARFARE__DOUBLE_DAMAGE_H_
 
 #include "ability.h"
+#include "exceptions/attack_out_of_bound.h"
 
 class DoubleDamage : public Ability {
  public:

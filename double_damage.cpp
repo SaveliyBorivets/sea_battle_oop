@@ -11,6 +11,6 @@ void DoubleDamage::use(pair<int, int> coords, Gamefield* gamefield) {
     gamefield->field_take_hit(coords);
     gamefield->field_take_hit(coords);
   } else {
-    cout << "Выход за границы поля\n";
+    throw Attack_out_of_bound("Ошибка: Атака за границы поля {" + to_string(coords.first) + ", " + to_string(coords.second) + "}.");;
   }
 }
