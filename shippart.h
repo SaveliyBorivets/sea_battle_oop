@@ -5,12 +5,18 @@
 #include <cstddef>
 #include <utility>
 
-#define UNTOUCHED "\x1B[1;47m"
-#define DAMAGED "\x1B[1;43m"
 #define DESTROYED "\x1B[1;41m"
+#define DAMAGED "\x1B[1;43m"
+#define UNTOUCHED "\x1B[1;47m"
 #define RESET "\x1B[0m"
 
 using namespace std;
+
+enum PartHealth {
+  DESTROYED_PART,
+  DAMAGED_PART,
+  UNTOUCHED_PART
+};
 
 class ShipPart {
  private:

@@ -15,4 +15,20 @@ add_executable(naval_warfare main.cpp
         shippart.h
         cell.cpp
         cell.h
+        ability.cpp
+        ability.h
+        double_damage.cpp
+        double_damage.h
+        scanner.cpp
+        scanner.h
+        bombard.cpp
+        bombard.h
+        ability_manager.cpp
+        ability_manager.h
+        exceptions/invalid_ability_usage.cpp
+        exceptions/invalid_ability_usage.h
+        exceptions/ship_placement_error.cpp
+        exceptions/ship_placement_error.h
+        exceptions/attack_out_of_bound.cpp
+        exceptions/attack_out_of_bound.h
 )

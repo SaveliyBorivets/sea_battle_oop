@@ -19,7 +19,7 @@ class Cell{
   void place_shipcell(ShipPart*);
   void remove_shipcell();
   bool is_shipcell();
-  Cell* copy();
+  ShipPart* get_shippart();
   void print_cell(bool enemy_flag);
 };
 

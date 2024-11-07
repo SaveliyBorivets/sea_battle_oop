@@ -2,7 +2,7 @@
 
 // Конструктор сегмента корабля
 ShipPart::ShipPart() {
-  hp = 2;
+  hp = UNTOUCHED_PART;
 }
 
 // Получения количества очков здоровья
@@ -13,13 +13,13 @@ size_t ShipPart::get_hp() {
 // Вывод визуализированного состояния корабля
 void ShipPart::part_status() {
   switch(hp) {
-    case 0:
+    case DESTROYED_PART:
       cout << DESTROYED << "  " << RESET << " ";
       break;
-    case 1:
+    case DAMAGED_PART:
       cout << DAMAGED << "  " << RESET << " ";
       break;
-    case 2:
+    case UNTOUCHED_PART:
       cout << UNTOUCHED << "  " << RESET << " ";
       break;
   }

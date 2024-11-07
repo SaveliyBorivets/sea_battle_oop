@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/homie/CLionProjects/naval_warfare -B/home/homie/CLionProjects/naval_warfare/cmake-build-debug
+  command = /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/homie/sea_battle_oop -B/home/homie/sea_battle_oop/cmake-build-debug
   description = Re-running CMake...
   generator = 1
 

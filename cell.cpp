@@ -32,7 +32,7 @@ void Cell::place_shipcell(ShipPart* ship_part) {
   shipcell = ship_part;
 }
 
-// Удаление корабля с поля
+// Удаление сегмента корабля с поля
 void Cell::remove_shipcell() {
   shipcell = nullptr;
 }
@@ -43,6 +43,10 @@ bool Cell::is_shipcell() {
     return true;
   }
   return false;
+}
+
+ShipPart* Cell::get_shippart() {
+  return shipcell;
 }
 
 // Визуализированный вывод клетки
