@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cstddef>
 #include <utility>
+#include <cstdlib>
 
 #define DESTROYED_PRINT "\x1B[1;41m"
 #define DAMAGED_PRINT "\x1B[1;43m"
@@ -20,13 +21,13 @@ enum HealthStatus {
 
 class ShipPart {
  private:
-  size_t hp;
+  int hp;
   //pair <size_t, size_t> coords;
  public:
   ShipPart();
   size_t get_hp();
   void part_status();
-  void part_damage();
+  void part_damage(int amount_of_damage);
 };
 
 #endif //NAVAL_WARFARE__SHIPPART_H_

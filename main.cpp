@@ -7,18 +7,13 @@ using namespace std;
 
 int main() {
   Gamefield gamefield = Gamefield(7, 10);
-  Ship_Manager ship_manager = Ship_Manager(2, {1, 3});
+  Ship_Manager ship_manager = Ship_Manager(2, {1, 1});
   AbilityManager ability_manager = AbilityManager();
   ship_manager.place_ships_on_field(&gamefield);
-  ability_manager.apply_ability({2, 2}, &gamefield);
-  gamefield.field_take_hit({0, 0}, 1);
-  if (ship_manager.update_all_ship_destruction_flags()) {
-    ability_manager.add_random_ability();
-  }
-  gamefield.field_take_hit({0, 0}, 1);
-  if (ship_manager.update_all_ship_destruction_flags()) {
-    ability_manager.add_random_ability();
-  }
+  DoubleDamage().use({0, 0}, &gamefield);
+  Bombard().use({0, 0}, &gamefield);
+  DoubleDamage().use({0, 0}, &gamefield);
+  Bombard().use({0, 0}, &gamefield);
   gamefield.print_gamefield(false);
   ship_manager.remove_ships_from_field(&gamefield);
   gamefield.print_gamefield(false);

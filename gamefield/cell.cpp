@@ -19,9 +19,9 @@ Cell& Cell::operator=(const Cell& other) {
 }
 
 // Получение урона клеткой
-void Cell::cell_hit() {
+void Cell::cell_hit(int amount_of_damage) {
   if (is_shipcell()) {
-    shipcell->part_damage();
+    shipcell->part_damage(amount_of_damage);
   } else {
     hit_flag = true;
   }

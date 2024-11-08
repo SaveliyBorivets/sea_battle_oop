@@ -26,8 +26,6 @@ void ShipPart::part_status() {
 }
 
 // Получение урона
-void ShipPart::part_damage() {
-  if (hp > 0) {
-    hp--;
-  }
+void ShipPart::part_damage(int amount_of_damage) {
+  hp = max(0, hp - amount_of_damage);
 }

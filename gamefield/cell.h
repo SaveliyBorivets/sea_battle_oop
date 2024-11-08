@@ -15,7 +15,7 @@ class Cell{
   Cell();
   Cell(const Cell& other); // Копирование
   Cell& operator=(const Cell& other);
-  void cell_hit();
+  void cell_hit(int amount_of_damage);
   void place_shipcell(ShipPart*);
   void remove_shipcell();
   bool is_shipcell();
