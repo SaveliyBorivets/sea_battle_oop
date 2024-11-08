@@ -5,26 +5,26 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(naval_warfare main.cpp
-        ship.cpp
-        ship.h
-        gamefield.cpp
-        gamefield.h
-        ship_manager.cpp
-        ship_manager.h
-        shippart.cpp
-        shippart.h
-        cell.cpp
-        cell.h
-        ability.cpp
-        ability.h
-        double_damage.cpp
-        double_damage.h
-        scanner.cpp
-        scanner.h
-        bombard.cpp
-        bombard.h
-        ability_manager.cpp
-        ability_manager.h
+        ships/ship.cpp
+        ships/ship.h
+        gamefield/gamefield.cpp
+        gamefield/gamefield.h
+        ships/ship_manager.cpp
+        ships/ship_manager.h
+        ships/shippart.cpp
+        ships/shippart.h
+        gamefield/cell.cpp
+        gamefield/cell.h
+        abilities/ability.cpp
+        abilities/ability.h
+        abilities/double_damage.cpp
+        abilities/double_damage.h
+        abilities/scanner.cpp
+        abilities/scanner.h
+        abilities/bombard.cpp
+        abilities/bombard.h
+        abilities/ability_manager.cpp
+        abilities/ability_manager.h
         exceptions/invalid_ability_usage.cpp
         exceptions/invalid_ability_usage.h
         exceptions/ship_placement_error.cpp

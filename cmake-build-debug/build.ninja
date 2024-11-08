@@ -85,35 +85,35 @@ build CMakeFiles/naval_warfare.dir/cell.cpp.o: CXX_COMPILER__naval_warfare_unsca
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/ability.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/ability.cpp || cmake_object_order_depends_target_naval_warfare
-  DEP_FILE = CMakeFiles/naval_warfare.dir/ability.cpp.o.d
+build CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/ability.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
-  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
 
-build CMakeFiles/naval_warfare.dir/double_damage.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/double_damage.cpp || cmake_object_order_depends_target_naval_warfare
-  DEP_FILE = CMakeFiles/naval_warfare.dir/double_damage.cpp.o.d
+build CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/double_damage.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
-  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
 
-build CMakeFiles/naval_warfare.dir/scanner.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/scanner.cpp || cmake_object_order_depends_target_naval_warfare
-  DEP_FILE = CMakeFiles/naval_warfare.dir/scanner.cpp.o.d
+build CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/scanner.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
-  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
 
-build CMakeFiles/naval_warfare.dir/bombard.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/bombard.cpp || cmake_object_order_depends_target_naval_warfare
-  DEP_FILE = CMakeFiles/naval_warfare.dir/bombard.cpp.o.d
+build CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/bombard.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
-  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
 
-build CMakeFiles/naval_warfare.dir/ability_manager.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/ability_manager.cpp || cmake_object_order_depends_target_naval_warfare
-  DEP_FILE = CMakeFiles/naval_warfare.dir/ability_manager.cpp.o.d
+build CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/ability_manager.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
-  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
 
 build CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/exceptions/invalid_ability_usage.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o.d
@@ -141,7 +141,7 @@ build CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o: CXX_COM
 #############################################
 # Link the executable naval_warfare
 
-build naval_warfare: CXX_EXECUTABLE_LINKER__naval_warfare_Debug CMakeFiles/naval_warfare.dir/main.cpp.o CMakeFiles/naval_warfare.dir/ship.cpp.o CMakeFiles/naval_warfare.dir/gamefield.cpp.o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o CMakeFiles/naval_warfare.dir/shippart.cpp.o CMakeFiles/naval_warfare.dir/cell.cpp.o CMakeFiles/naval_warfare.dir/ability.cpp.o CMakeFiles/naval_warfare.dir/double_damage.cpp.o CMakeFiles/naval_warfare.dir/scanner.cpp.o CMakeFiles/naval_warfare.dir/bombard.cpp.o CMakeFiles/naval_warfare.dir/ability_manager.cpp.o CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o
+build naval_warfare: CXX_EXECUTABLE_LINKER__naval_warfare_Debug CMakeFiles/naval_warfare.dir/main.cpp.o CMakeFiles/naval_warfare.dir/ship.cpp.o CMakeFiles/naval_warfare.dir/gamefield.cpp.o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o CMakeFiles/naval_warfare.dir/shippart.cpp.o CMakeFiles/naval_warfare.dir/cell.cpp.o CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   POST_BUILD = :

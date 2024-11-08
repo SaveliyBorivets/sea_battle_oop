@@ -130,11 +130,13 @@ void Gamefield::remove_ship(Ship* ship, pair<int, int> start_coords, Orientation
 }
 
 // Функция попадания в поле
-void Gamefield::field_take_hit(pair<int, int> coords) {
+void Gamefield::field_take_hit(pair<int, int> coords, int damage) {//параметр урона добавить
   int x = coords.first;
   int y = coords.second;
-  if (prove_coords(coords)) {
-    field[y][x]->cell_hit();
+  if (prove_coords(coords)) {//цикл фор на урон
+    for (int i = 0; i < damage; i++) {
+      field[y][x]->cell_hit();
+    }
   } else {
     throw Attack_out_of_bound("Ошибка: Атака за границы поля {" + to_string(x) + ", " + to_string(y) + "}.");
   }

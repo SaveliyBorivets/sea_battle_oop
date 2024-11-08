@@ -19,6 +19,6 @@ void Bombard::use(pair<int, int> coords, Gamefield* gamefield) {
   if (!all_shipcells_coords.empty()) {
     print_activation();
     int hit_index = rand() % all_shipcells_coords.size();
-    gamefield->field_take_hit(all_shipcells_coords[hit_index]);
+    gamefield->field_take_hit(all_shipcells_coords[hit_index], 1);
   }
 }

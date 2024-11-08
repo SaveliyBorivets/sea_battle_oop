@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 #include "ship.h"
-#include "gamefield.h"
+#include "../gamefield/gamefield.h"
 
 class Ship_Manager {
  private:

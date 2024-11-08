@@ -5,9 +5,9 @@
 #include <iostream>
 #include <algorithm>
 #include "cell.h"
-#include "ship.h"
-#include "exceptions/attack_out_of_bound.h"
-#include "exceptions/ship_placement_error.h"
+#include "../ships/ship.h"
+#include "../exceptions/attack_out_of_bound.h"
+#include "../exceptions/ship_placement_error.h"
 
 class Gamefield {
  private:
@@ -25,7 +25,7 @@ class Gamefield {
   bool prove_shipcell(pair<int, int> coords);
   bool place_ship(Ship* ship, pair<int, int> start_coords, Orientation orientation);
   void remove_ship(Ship* ship, pair<int, int> start_coords, Orientation orientation);
-  void field_take_hit(pair<int, int> coords);
+  void field_take_hit(pair<int, int> coords, int damage);
   int get_field_width();
   int get_field_height();
   Cell* get_cell(pair<int, int> coords);

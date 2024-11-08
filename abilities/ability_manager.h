@@ -5,7 +5,7 @@
 #include "double_damage.h"
 #include "scanner.h"
 #include "bombard.h"
-#include "exceptions/invalid_ability_usage.h"
+#include "../exceptions/invalid_ability_usage.h"
 
 class AbilityManager {
  private:

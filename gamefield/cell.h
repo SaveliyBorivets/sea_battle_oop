@@ -1,7 +1,7 @@
 #ifndef NAVAL_WARFARE__CELL_H_
 #define NAVAL_WARFARE__CELL_H_
 
-#include "shippart.h"
+#include "../ships/shippart.h"
 
 #define SEA "\x1B[1;44m"
 #define SEA_HIT "\x1B[1;30;45m"

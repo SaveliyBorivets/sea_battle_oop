@@ -37,33 +37,33 @@
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ability.cpp.o -c /home/homie/sea_battle_oop/ability.cpp",
-  "file": "/home/homie/sea_battle_oop/ability.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/ability.cpp.o"
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o -c /home/homie/sea_battle_oop/abilities/ability.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/ability.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o"
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/double_damage.cpp.o -c /home/homie/sea_battle_oop/double_damage.cpp",
-  "file": "/home/homie/sea_battle_oop/double_damage.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/double_damage.cpp.o"
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o -c /home/homie/sea_battle_oop/abilities/double_damage.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/double_damage.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o"
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/scanner.cpp.o -c /home/homie/sea_battle_oop/scanner.cpp",
-  "file": "/home/homie/sea_battle_oop/scanner.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/scanner.cpp.o"
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o -c /home/homie/sea_battle_oop/abilities/scanner.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/scanner.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o"
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/bombard.cpp.o -c /home/homie/sea_battle_oop/bombard.cpp",
-  "file": "/home/homie/sea_battle_oop/bombard.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/bombard.cpp.o"
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o -c /home/homie/sea_battle_oop/abilities/bombard.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/bombard.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o"
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ability_manager.cpp.o -c /home/homie/sea_battle_oop/ability_manager.cpp",
-  "file": "/home/homie/sea_battle_oop/ability_manager.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/ability_manager.cpp.o"
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o -c /home/homie/sea_battle_oop/abilities/ability_manager.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/ability_manager.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o"
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",

@@ -1,7 +1,7 @@
 #ifndef NAVAL_WARFARE__ABILITY_H_
 #define NAVAL_WARFARE__ABILITY_H_
 
-#include "gamefield.h"
+#include "../gamefield/gamefield.h"
 
 class Ability {
  public:
