@@ -80,6 +80,13 @@ bool Gamefield::prove_placeability(pair<int, int> coords) {
   return true;
 }
 
+bool Gamefield::prove_shipcell(pair<int, int> coords) {
+  if (prove_coords(coords)) {
+    return field[coords.second][coords.first]->is_shipcell();
+  }
+  return false;
+}
+
 // Функция размещения корабля
 bool Gamefield::place_ship(Ship* ship, pair<int, int> start_coords, Orientation orientation) {
   vector<ShipPart*> ship_parts = ship->get_ship_parts();
@@ -87,8 +94,7 @@ bool Gamefield::place_ship(Ship* ship, pair<int, int> start_coords, Orientation 
 
   for (int i = 0; i < ship->get_ship_length(); i++) {
     if (!prove_placeability(coords)) {
-      cout << "Корабль не может быть расположен в этом месте" << endl;
-      return false;
+      throw Ship_placement_error("Корабль не может быть расположен в этом месте {" + to_string(coords.first) + ", " + to_string(coords.second) + "}.");
     }
     if (orientation == HORIZONTAL) {
       coords.first++;
@@ -124,12 +130,31 @@ void Gamefield::remove_ship(Ship* ship, pair<int, int> start_coords, Orientation
 }
 
 // Функция попадания в поле
-void Gamefield::field_take_hit(pair<int, int> coords) {
+void Gamefield::field_take_hit(pair<int, int> coords, int damage) {//параметр урона добавить
   int x = coords.first;
   int y = coords.second;
-  if (prove_coords(coords)) {
-    field[y][x]->cell_hit();
+  if (prove_coords(coords)) {//цикл фор на урон
+    for (int i = 0; i < damage; i++) {
+      field[y][x]->cell_hit();
+    }
+  } else {
+    throw Attack_out_of_bound("Ошибка: Атака за границы поля {" + to_string(x) + ", " + to_string(y) + "}.");
   }
+}
+
+int Gamefield::get_field_width() {
+  return field_width;
+}
+
+int Gamefield::get_field_height() {
+  return field_height;
+}
+
+Cell* Gamefield::get_cell(pair<int, int> coords) {
+  if (prove_coords(coords)) {
+    return field[coords.second][coords.first];
+  }
+  return nullptr;
 }
 
 // Вывод поля

@@ -122,3 +122,12 @@ void Ship_Manager::input_coordinates(size_t ship_ind) {
     return;
   }
 }
+
+bool Ship_Manager::update_all_ship_destruction_flags() {
+  for (auto cur_ship : ships) {
+    if (cur_ship->update_destruction_flag()) {
+      return true;
+    }
+  }
+  return false;
+}

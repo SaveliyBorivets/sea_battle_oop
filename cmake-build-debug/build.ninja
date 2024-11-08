@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /home/homie/CLionProjects/naval_warfare/cmake-build-debug/
+cmake_ninja_workdir = /home/homie/sea_battle_oop/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target naval_warfare
 
@@ -49,41 +49,89 @@ cmake_ninja_workdir = /home/homie/CLionProjects/naval_warfare/cmake-build-debug/
 
 build cmake_object_order_depends_target_naval_warfare: phony || CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/main.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/main.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/main.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/main.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/ship.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/ship.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/ship.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/ship.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/ship.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/gamefield.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/gamefield.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/gamefield.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/gamefield.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/gamefield.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/ship_manager.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/ship_manager.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/ship_manager.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/ship_manager.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/ship_manager.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/shippart.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/shippart.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/shippart.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/shippart.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/shippart.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
 
-build CMakeFiles/naval_warfare.dir/cell.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/CLionProjects/naval_warfare/cell.cpp || cmake_object_order_depends_target_naval_warfare
+build CMakeFiles/naval_warfare.dir/cell.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/cell.cpp || cmake_object_order_depends_target_naval_warfare
   DEP_FILE = CMakeFiles/naval_warfare.dir/cell.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir
+
+build CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/ability.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
+
+build CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/double_damage.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
+
+build CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/scanner.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
+
+build CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/bombard.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
+
+build CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/abilities/ability_manager.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/abilities
+
+build CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/exceptions/invalid_ability_usage.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/exceptions
+
+build CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/exceptions/ship_placement_error.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/exceptions
+
+build CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o: CXX_COMPILER__naval_warfare_unscanned_Debug /home/homie/sea_battle_oop/exceptions/attack_out_of_bound.cpp || cmake_object_order_depends_target_naval_warfare
+  DEP_FILE = CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/naval_warfare.dir
+  OBJECT_FILE_DIR = CMakeFiles/naval_warfare.dir/exceptions
 
 
 # =============================================================================
@@ -93,7 +141,7 @@ build CMakeFiles/naval_warfare.dir/cell.cpp.o: CXX_COMPILER__naval_warfare_unsca
 #############################################
 # Link the executable naval_warfare
 
-build naval_warfare: CXX_EXECUTABLE_LINKER__naval_warfare_Debug CMakeFiles/naval_warfare.dir/main.cpp.o CMakeFiles/naval_warfare.dir/ship.cpp.o CMakeFiles/naval_warfare.dir/gamefield.cpp.o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o CMakeFiles/naval_warfare.dir/shippart.cpp.o CMakeFiles/naval_warfare.dir/cell.cpp.o
+build naval_warfare: CXX_EXECUTABLE_LINKER__naval_warfare_Debug CMakeFiles/naval_warfare.dir/main.cpp.o CMakeFiles/naval_warfare.dir/ship.cpp.o CMakeFiles/naval_warfare.dir/gamefield.cpp.o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o CMakeFiles/naval_warfare.dir/shippart.cpp.o CMakeFiles/naval_warfare.dir/cell.cpp.o CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/naval_warfare.dir
   POST_BUILD = :
@@ -106,7 +154,7 @@ build naval_warfare: CXX_EXECUTABLE_LINKER__naval_warfare_Debug CMakeFiles/naval
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/homie/CLionProjects/naval_warfare/cmake-build-debug && /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /home/homie/sea_battle_oop/cmake-build-debug && /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -117,7 +165,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /home/homie/CLionProjects/naval_warfare/cmake-build-debug && /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/homie/CLionProjects/naval_warfare -B/home/homie/CLionProjects/naval_warfare/cmake-build-debug
+  COMMAND = cd /home/homie/sea_battle_oop/cmake-build-debug && /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/homie/sea_battle_oop -B/home/homie/sea_battle_oop/cmake-build-debug
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -133,7 +181,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 #############################################
-# Folder: /home/homie/CLionProjects/naval_warfare/cmake-build-debug
+# Folder: /home/homie/sea_battle_oop/cmake-build-debug
 
 build all: phony naval_warfare
 
@@ -144,14 +192,14 @@ build all: phony naval_warfare
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/homie/CLionProjects/naval_warfare/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/homie/sea_battle_oop/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/homie/CLionProjects/naval_warfare/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/homie/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/homie/sea_battle_oop/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

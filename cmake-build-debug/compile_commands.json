@@ -1,38 +1,86 @@
 [
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/main.cpp.o -c /home/homie/CLionProjects/naval_warfare/main.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/main.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/main.cpp.o -c /home/homie/sea_battle_oop/main.cpp",
+  "file": "/home/homie/sea_battle_oop/main.cpp",
   "output": "CMakeFiles/naval_warfare.dir/main.cpp.o"
 },
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship.cpp.o -c /home/homie/CLionProjects/naval_warfare/ship.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/ship.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship.cpp.o -c /home/homie/sea_battle_oop/ship.cpp",
+  "file": "/home/homie/sea_battle_oop/ship.cpp",
   "output": "CMakeFiles/naval_warfare.dir/ship.cpp.o"
 },
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/gamefield.cpp.o -c /home/homie/CLionProjects/naval_warfare/gamefield.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/gamefield.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/gamefield.cpp.o -c /home/homie/sea_battle_oop/gamefield.cpp",
+  "file": "/home/homie/sea_battle_oop/gamefield.cpp",
   "output": "CMakeFiles/naval_warfare.dir/gamefield.cpp.o"
 },
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o -c /home/homie/CLionProjects/naval_warfare/ship_manager.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/ship_manager.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/ship_manager.cpp.o -c /home/homie/sea_battle_oop/ship_manager.cpp",
+  "file": "/home/homie/sea_battle_oop/ship_manager.cpp",
   "output": "CMakeFiles/naval_warfare.dir/ship_manager.cpp.o"
 },
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/shippart.cpp.o -c /home/homie/CLionProjects/naval_warfare/shippart.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/shippart.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/shippart.cpp.o -c /home/homie/sea_battle_oop/shippart.cpp",
+  "file": "/home/homie/sea_battle_oop/shippart.cpp",
   "output": "CMakeFiles/naval_warfare.dir/shippart.cpp.o"
 },
 {
-  "directory": "/home/homie/CLionProjects/naval_warfare/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/cell.cpp.o -c /home/homie/CLionProjects/naval_warfare/cell.cpp",
-  "file": "/home/homie/CLionProjects/naval_warfare/cell.cpp",
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/cell.cpp.o -c /home/homie/sea_battle_oop/cell.cpp",
+  "file": "/home/homie/sea_battle_oop/cell.cpp",
   "output": "CMakeFiles/naval_warfare.dir/cell.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o -c /home/homie/sea_battle_oop/abilities/ability.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/ability.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o -c /home/homie/sea_battle_oop/abilities/double_damage.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/double_damage.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o -c /home/homie/sea_battle_oop/abilities/scanner.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/scanner.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/scanner.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o -c /home/homie/sea_battle_oop/abilities/bombard.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/bombard.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/bombard.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o -c /home/homie/sea_battle_oop/abilities/ability_manager.cpp",
+  "file": "/home/homie/sea_battle_oop/abilities/ability_manager.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/abilities/ability_manager.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o -c /home/homie/sea_battle_oop/exceptions/invalid_ability_usage.cpp",
+  "file": "/home/homie/sea_battle_oop/exceptions/invalid_ability_usage.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/exceptions/invalid_ability_usage.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o -c /home/homie/sea_battle_oop/exceptions/ship_placement_error.cpp",
+  "file": "/home/homie/sea_battle_oop/exceptions/ship_placement_error.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/exceptions/ship_placement_error.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o -c /home/homie/sea_battle_oop/exceptions/attack_out_of_bound.cpp",
+  "file": "/home/homie/sea_battle_oop/exceptions/attack_out_of_bound.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o"
 }
 ]

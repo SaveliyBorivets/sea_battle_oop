@@ -1,7 +1,7 @@
 #ifndef NAVAL_WARFARE__CELL_H_
 #define NAVAL_WARFARE__CELL_H_
 
-#include "shippart.h"
+#include "../ships/shippart.h"
 
 #define SEA "\x1B[1;44m"
 #define SEA_HIT "\x1B[1;30;45m"
@@ -19,7 +19,7 @@ class Cell{
   void place_shipcell(ShipPart*);
   void remove_shipcell();
   bool is_shipcell();
-  Cell* copy();
+  ShipPart* get_shippart();
   void print_cell(bool enemy_flag);
 };
 
