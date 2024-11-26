@@ -2,6 +2,7 @@
 
 // Конструктор игрового поля, принимает на вход длину и ширину
 Gamefield::Gamefield(int width, int height) : field_width(width), field_height(height), field(height, vector<Cell*> (width, nullptr)) {
+  amount_of_damage = 1;
   for (size_t y = 0; y < field_height; y++) {
     for (size_t x = 0; x < field_width; x++) {
       field[y][x] = new Cell();
@@ -14,6 +15,7 @@ Gamefield& Gamefield::operator=(const Gamefield& other) {
   if (this != &other) {
     field_width = other.field_width;
     field_height = other.field_height;
+    amount_of_damage = other.amount_of_damage;
     field.clear();
     field.resize(other.field.size());
     for (size_t i = 0; i < other.field.size(); ++i) {
@@ -27,7 +29,7 @@ Gamefield& Gamefield::operator=(const Gamefield& other) {
 }
 
 // Конструктор копирования
-Gamefield::Gamefield(const Gamefield& other) : field_width(other.field_width), field_height(other.field_height) {
+Gamefield::Gamefield(const Gamefield& other) : field_width(other.field_width), field_height(other.field_height), amount_of_damage(other.amount_of_damage) {
   field.resize(other.field.size());
   for (size_t i = 0; i < other.field.size(); ++i) {
     field[i].resize(other.field[i].size());
@@ -42,6 +44,7 @@ Gamefield& Gamefield::operator=(Gamefield&& other) noexcept {
   if (this != &other) {
     field_width = other.field_width;
     field_height = other.field_height;
+    amount_of_damage = other.amount_of_damage;
     other.field_height = 0;
     other.field_width = 0;
     field = std::move(other.field);
@@ -50,7 +53,7 @@ Gamefield& Gamefield::operator=(Gamefield&& other) noexcept {
 }
 
 // Конструктор перемещения
-Gamefield::Gamefield(Gamefield&& other) noexcept : field_width(other.field_width), field_height(other.field_height), field(std::move(other.field)) {
+Gamefield::Gamefield(Gamefield&& other) noexcept : field_width(other.field_width), field_height(other.field_height), amount_of_damage(other.amount_of_damage), field(std::move(other.field)) {
   other.field_height = 0;
   other.field_width = 0;
 }
@@ -129,14 +132,17 @@ void Gamefield::remove_ship(Ship* ship, pair<int, int> start_coords, Orientation
   }
 }
 
+void Gamefield::mul_amount_of_damage(int multiplier) {
+  amount_of_damage *= multiplier;
+}
+
 // Функция попадания в поле
-void Gamefield::field_take_hit(pair<int, int> coords, int damage) {//параметр урона добавить
+void Gamefield::field_take_hit(pair<int, int> coords) {
   int x = coords.first;
   int y = coords.second;
-  if (prove_coords(coords)) {//цикл фор на урон
-    for (int i = 0; i < damage; i++) {
-      field[y][x]->cell_hit();
-    }
+  if (prove_coords(coords)) {
+    field[y][x]->cell_hit(amount_of_damage);
+    amount_of_damage = 1; // Сброс количества урона
   } else {
     throw Attack_out_of_bound("Ошибка: Атака за границы поля {" + to_string(x) + ", " + to_string(y) + "}.");
   }

@@ -14,6 +14,7 @@ class Gamefield {
   vector<vector<Cell*>> field;
   int field_width;
   int field_height;
+  int amount_of_damage;
  public:
   Gamefield(int width, int height);
   Gamefield(const Gamefield& other);//Копирование
@@ -25,7 +26,8 @@ class Gamefield {
   bool prove_shipcell(pair<int, int> coords);
   bool place_ship(Ship* ship, pair<int, int> start_coords, Orientation orientation);
   void remove_ship(Ship* ship, pair<int, int> start_coords, Orientation orientation);
-  void field_take_hit(pair<int, int> coords, int damage);
+  void mul_amount_of_damage(int multiplier);
+  void field_take_hit(pair<int, int> coords);
   int get_field_width();
   int get_field_height();
   Cell* get_cell(pair<int, int> coords);
