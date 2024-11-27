@@ -11,9 +11,11 @@ void AbilityManager::apply_ability(pair<int, int> coords, Gamefield* gamefield) 
   string answer;
   cout << "Хотите использовать способность(Yes/No)?\n";
   cin >> answer;
+  getchar();
   while (answer != "No" && answer != "Yes") {
     cout << "Некорректный ответ: " << answer << ". Хотите использовать способность(Yes/No)?\n";
     cin >> answer;
+    getchar();
   }
   if (answer == "Yes") {
     if (abilities.empty()) {

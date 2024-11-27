@@ -31,7 +31,7 @@ class Gamefield {
   int get_field_width();
   int get_field_height();
   Cell* get_cell(pair<int, int> coords);
-  void print_gamefield(bool enemy_flag);
+  void print_gamefield(bool enemy_flag = false);
 };
 
 #endif //NAVAL_WARFARE__GAMEFIELD_H_

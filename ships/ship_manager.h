@@ -22,6 +22,7 @@ class Ship_Manager {
   void place_ships_on_field(Gamefield* gamefield);
   void remove_ships_from_field(Gamefield* gamefield);
   bool update_all_ship_destruction_flags();
+  bool is_all_destroyed();
   void print_ships_status();
 };
 

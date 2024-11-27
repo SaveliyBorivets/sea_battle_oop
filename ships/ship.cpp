@@ -37,6 +37,10 @@ vector<ShipPart*> Ship::get_ship_parts() {
   return ship_parts;
 }
 
+bool Ship::get_destruction_flag() {
+  return destruction_flag;
+}
+
 // Получение длины корабля
 size_t Ship::get_ship_length() {
   return ship_length;

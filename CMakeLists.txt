@@ -15,7 +15,6 @@ add_executable(naval_warfare main.cpp
         ships/shippart.h
         gamefield/cell.cpp
         gamefield/cell.h
-        abilities/ability.cpp
         abilities/ability.h
         abilities/double_damage.cpp
         abilities/double_damage.h
@@ -31,4 +30,10 @@ add_executable(naval_warfare main.cpp
         exceptions/ship_placement_error.h
         exceptions/attack_out_of_bound.cpp
         exceptions/attack_out_of_bound.h
+        game/game.cpp
+        game/game.h
+        game/game_state.cpp
+        game/game_state.h
+        game/player.cpp
+        game/player.h
 )

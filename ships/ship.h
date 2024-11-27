@@ -25,6 +25,7 @@ class Ship {
   void ship_status();
   bool update_destruction_flag();
   vector<ShipPart*> get_ship_parts();
+  bool get_destruction_flag();
   size_t get_ship_length();
 };
 

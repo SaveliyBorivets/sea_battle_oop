@@ -37,12 +37,6 @@
 },
 {
   "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
-  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o -c /home/homie/sea_battle_oop/abilities/ability.cpp",
-  "file": "/home/homie/sea_battle_oop/abilities/ability.cpp",
-  "output": "CMakeFiles/naval_warfare.dir/abilities/ability.cpp.o"
-},
-{
-  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
   "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o -c /home/homie/sea_battle_oop/abilities/double_damage.cpp",
   "file": "/home/homie/sea_battle_oop/abilities/double_damage.cpp",
   "output": "CMakeFiles/naval_warfare.dir/abilities/double_damage.cpp.o"
@@ -82,5 +76,23 @@
   "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o -c /home/homie/sea_battle_oop/exceptions/attack_out_of_bound.cpp",
   "file": "/home/homie/sea_battle_oop/exceptions/attack_out_of_bound.cpp",
   "output": "CMakeFiles/naval_warfare.dir/exceptions/attack_out_of_bound.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/game/game.cpp.o -c /home/homie/sea_battle_oop/game/game.cpp",
+  "file": "/home/homie/sea_battle_oop/game/game.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/game/game.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/game/game_state.cpp.o -c /home/homie/sea_battle_oop/game/game_state.cpp",
+  "file": "/home/homie/sea_battle_oop/game/game_state.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/game/game_state.cpp.o"
+},
+{
+  "directory": "/home/homie/sea_battle_oop/cmake-build-debug",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/naval_warfare.dir/game/player.cpp.o -c /home/homie/sea_battle_oop/game/player.cpp",
+  "file": "/home/homie/sea_battle_oop/game/player.cpp",
+  "output": "CMakeFiles/naval_warfare.dir/game/player.cpp.o"
 }
 ]
