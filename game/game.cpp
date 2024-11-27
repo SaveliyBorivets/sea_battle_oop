@@ -1,16 +1,46 @@
 #include "game.h"
 
 Game::Game() {
-  player_gamefield = new Gamefield(10, 10);
-  computer_gamefield = new Gamefield(10, 10);
-  player_ship_manager = new Ship_Manager(1, {1});
-  computer_ship_manager = new Ship_Manager(1, {1});
-  player_ability_manager = new AbilityManager();
+  game_status = NOT_STARTED;
+  game_state = nullptr;
+  player_gamefield = nullptr;
+  computer_gamefield = nullptr;
+  player_ship_manager = nullptr;
+  computer_ship_manager = nullptr;
+  player_ability_manager = nullptr;
 }
 
 void Game::game_start() {
+  game_state = new Game_state();
+  player_gamefield = new Gamefield(10, 10);
+  computer_gamefield = new Gamefield(10, 10);
+  player_ship_manager = new Ship_Manager(2, {3, 3});
+  computer_ship_manager = new Ship_Manager(2, {3, 3});
+  player_ability_manager = new AbilityManager();
   player_ship_manager->place_ships_on_field(player_gamefield);
   computer_ship_manager->place_ships_on_field(computer_gamefield);
+}
+
+//void Game::game_end() {
+//  if (game_state->get_game_status() == FAILURE) {
+//    player_ship_manager->remove_ships_from_field(player_gamefield);
+//    computer_ship_manager->remove_ships_from_field(computer_gamefield);
+//  }
+//}
+
+void Game::game_save() {
+  string answer;
+  cout << "Хотите сохранить игру(Yes/No)?\n";
+  cin >> answer;
+  getchar();
+  while (answer != "No" && answer != "Yes") {
+    cout << "Некорректный ответ: " << answer << ". Хотите сохранить игру(Yes/No)?\n";
+    cin >> answer;
+    getchar();
+  }
+  if (answer == "Yes") {
+    game_state->save_game_state(player_ship_manager, player_gamefield, player_ability_manager, computer_ship_manager, computer_gamefield);
+  }
 }
 
 void Game::player_move() {
@@ -40,10 +70,9 @@ void Game::computer_move() {
 
 void Game::rounds() {
   while (!player_ship_manager->is_all_destroyed() && !computer_ship_manager->is_all_destroyed()) {
+    game_save();
     player_move();
-    if (computer_ship_manager->is_all_destroyed()) {
-      cout << "ПОБЕДА!" << endl;
-    } else {
+    if (!computer_ship_manager->is_all_destroyed()) {
       computer_move();
     }
   }

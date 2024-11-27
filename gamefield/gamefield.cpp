@@ -173,3 +173,19 @@ void Gamefield::print_gamefield(bool enemy_flag) {
   }
   cout << endl;
 }
+
+string Gamefield::gamefield_to_string() {
+  string gamefield_string;
+  gamefield_string += "sizes:" + to_string(field_width) + " " + to_string(field_height) + "\n";
+  gamefield_string += "amount_of_damage:" + to_string(amount_of_damage) + "\n";
+  gamefield_string += "hits:";
+  for (int y = 0; y < field_height; y++) {
+    for (int x = 0; x < field_width; x++) {
+      if (!field[y][x]->is_shipcell() && field[y][x]->is_hit()) {
+        gamefield_string += to_string(x) + " " + to_string(y) + ";";
+      }
+    }
+  }
+  gamefield_string += "\n";
+  return gamefield_string;
+}

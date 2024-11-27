@@ -24,3 +24,7 @@ void Scanner::use(pair<int, int> coords, Gamefield* gamefield) {
     cout << "Выход за границы поля\n";
   }
 }
+
+string Scanner::ability_to_string() {
+  return "Scanner";
+}

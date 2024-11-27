@@ -27,6 +27,7 @@ class Ship {
   vector<ShipPart*> get_ship_parts();
   bool get_destruction_flag();
   size_t get_ship_length();
+  string ship_to_string();
 };
 
 #endif //NAVAL_WARFARE__SHIP_H_

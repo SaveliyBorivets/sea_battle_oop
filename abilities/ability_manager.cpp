@@ -39,3 +39,12 @@ void AbilityManager::add_random_ability() {
   }
   cout << "Получена новая способность!\n";
 }
+
+string AbilityManager::ability_manager_to_string() {
+  string ability_manager_string = "abilities_amount:" + to_string(abilities.size()) + "\n";
+  for (auto ability : abilities) {
+    ability_manager_string += ability->ability_to_string() + " ";
+  }
+  ability_manager_string += "\n";
+  return ability_manager_string;
+}

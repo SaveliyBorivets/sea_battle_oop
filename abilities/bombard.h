@@ -8,6 +8,7 @@
 class Bombard : public Ability {
  public:
   void use(pair<int, int> coords, Gamefield* gamefield) override;
+  string ability_to_string() override;
  private:
   void print_activation() override;
 };

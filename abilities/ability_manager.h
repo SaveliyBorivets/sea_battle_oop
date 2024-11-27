@@ -14,6 +14,7 @@ class AbilityManager {
   AbilityManager();
   void apply_ability(pair<int, int> coords, Gamefield* gamefield);
   void add_random_ability();
+  string ability_manager_to_string();
 };
 
 

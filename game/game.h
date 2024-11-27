@@ -11,6 +11,8 @@
 
 class Game {
  private:
+  GameStatus game_status;
+  Game_state* game_state;
   Gamefield* player_gamefield;
   Gamefield* computer_gamefield;
   Ship_Manager* player_ship_manager;
@@ -20,12 +22,13 @@ class Game {
  public:
   Game();
   void game_start(); // Начало игры
+  void game_end(); // Конец игры
+  void game_save();
   void player_move(); // Ход от игрока
   void computer_move(); // Ход от компьютера
   void rounds(); // Чередование ходов
   void defeat();
   void victory();
-  GameStatus get_game_state();
 };
 
 #endif //NAVAL_WARFARE_GAME_GAME_H_

@@ -24,6 +24,7 @@ class Ship_Manager {
   bool update_all_ship_destruction_flags();
   bool is_all_destroyed();
   void print_ships_status();
+  string ship_manager_to_string();
 };
 
 #endif //NAVAL_WARFARE__SHIP_MANAGER_H_

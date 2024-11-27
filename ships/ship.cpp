@@ -45,3 +45,11 @@ bool Ship::get_destruction_flag() {
 size_t Ship::get_ship_length() {
   return ship_length;
 }
+
+string Ship::ship_to_string() {
+  string ship_string;
+  for (auto part : ship_parts) {
+    ship_string += to_string(part->get_hp()) + " ";
+  }
+  return ship_string;
+}
