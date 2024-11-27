@@ -34,6 +34,4 @@ add_executable(naval_warfare main.cpp
         game/game.h
         game/game_state.cpp
         game/game_state.h
-        game/player.cpp
-        game/player.h
 )

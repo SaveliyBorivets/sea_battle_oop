@@ -10,6 +10,6 @@ using namespace std;
 int main() {
   Game new_game;
   new_game.game_start();
-  new_game.player_move();
+  new_game.rounds();
   return 0;
 }

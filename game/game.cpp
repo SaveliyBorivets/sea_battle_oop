@@ -1,22 +1,53 @@
 #include "game.h"
 
-Game::Game() : gamefield(10,10), ship_manager(1, {1}), ability_manager() {}
+Game::Game() {
+  player_gamefield = new Gamefield(10, 10);
+  computer_gamefield = new Gamefield(10, 10);
+  player_ship_manager = new Ship_Manager(1, {1});
+  computer_ship_manager = new Ship_Manager(1, {1});
+  player_ability_manager = new AbilityManager();
+}
 
 void Game::game_start() {
-  ship_manager.place_ships_on_field(&gamefield);
+  player_ship_manager->place_ships_on_field(player_gamefield);
+  computer_ship_manager->place_ships_on_field(computer_gamefield);
 }
 
 void Game::player_move() {
-  pair<int, int> action_coordinates;
-  while (!ship_manager.is_all_destroyed()) {
-    gamefield.print_gamefield();
-    action_coordinates = input_coordinates();
-    ability_manager.apply_ability(action_coordinates, &gamefield);
-    gamefield.field_take_hit(action_coordinates);
-    ship_manager.update_all_ship_destruction_flags();
+  cout << "ВАШ ХОД!" << endl;
+  computer_gamefield->print_gamefield();
+  pair<int, int> action_coordinates = input_coordinates();
+  player_ability_manager->apply_ability(action_coordinates, computer_gamefield);
+  computer_gamefield->field_take_hit(action_coordinates);
+  if (computer_ship_manager->update_all_ship_destruction_flags()) {
+    player_ability_manager->add_random_ability();
   }
-  gamefield.print_gamefield();
-  cout << "Игра закончилась" << endl;
+  computer_gamefield->print_gamefield();
+}
+
+void Game::computer_move() {
+  cout << "ХОД ПРОТИВНИКА!" << endl;
+  srand(time(nullptr));
+  int x = rand() % player_gamefield->get_field_width();
+  int y = rand() % player_gamefield->get_field_height();
+  pair<int, int> action_coordinates = {x, y};
+  player_gamefield->field_take_hit(action_coordinates);
+  player_gamefield->print_gamefield();
+  if (player_ship_manager->update_all_ship_destruction_flags()) {
+    cout << "Потеря! Противник уничтожил корабль!" << endl;
+  }
+}
+
+void Game::rounds() {
+  while (!player_ship_manager->is_all_destroyed() && !computer_ship_manager->is_all_destroyed()) {
+    player_move();
+    if (computer_ship_manager->is_all_destroyed()) {
+      cout << "ПОБЕДА!" << endl;
+    } else {
+      computer_move();
+    }
+  }
+  cout << "Игра закончилась!" << endl;
 }
 
 pair<int, int> Game::input_coordinates() {
