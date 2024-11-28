@@ -9,6 +9,13 @@
 #include <stdlib.h>
 #include <time.h>
 
+enum GameStatus {
+  NOT_STARTED,
+  IN_PROCESS,
+  VICTORY,
+  FAILURE
+};
+
 class Game {
  private:
   GameStatus game_status;
@@ -22,13 +29,13 @@ class Game {
  public:
   Game();
   void game_start(); // Начало игры
-  void game_end(); // Конец игры
+  void new_game(); // Конец игры
   void game_save();
+  void game_load();
   void player_move(); // Ход от игрока
   void computer_move(); // Ход от компьютера
   void rounds(); // Чередование ходов
   void defeat();
-  void victory();
 };
 
 #endif //NAVAL_WARFARE_GAME_GAME_H_

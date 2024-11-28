@@ -26,5 +26,5 @@ void Scanner::use(pair<int, int> coords, Gamefield* gamefield) {
 }
 
 string Scanner::ability_to_string() {
-  return "Scanner";
+  return to_string(SCANNER);
 }

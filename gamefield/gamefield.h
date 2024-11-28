@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <sstream>
 #include <algorithm>
 #include "cell.h"
 #include "../ships/ship.h"
@@ -33,6 +34,7 @@ class Gamefield {
   Cell* get_cell(pair<int, int> coords);
   void print_gamefield(bool enemy_flag = false);
   string gamefield_to_string();
+  void load(string data);
 };
 
 #endif //NAVAL_WARFARE__GAMEFIELD_H_

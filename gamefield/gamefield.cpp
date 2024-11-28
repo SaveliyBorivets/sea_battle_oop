@@ -21,7 +21,7 @@ Gamefield& Gamefield::operator=(const Gamefield& other) {
     for (size_t i = 0; i < other.field.size(); ++i) {
       field[i].resize(other.field[i].size());
       for (size_t j = 0; j < other.field[i].size(); ++j) {
-        field[i][j] = std::move(other.field[i][j]);
+        field[i][j] = move(other.field[i][j]);
       }
     }
   }
@@ -47,13 +47,13 @@ Gamefield& Gamefield::operator=(Gamefield&& other) noexcept {
     amount_of_damage = other.amount_of_damage;
     other.field_height = 0;
     other.field_width = 0;
-    field = std::move(other.field);
+    field = move(other.field);
   }
   return *this;
 }
 
 // Конструктор перемещения
-Gamefield::Gamefield(Gamefield&& other) noexcept : field_width(other.field_width), field_height(other.field_height), amount_of_damage(other.amount_of_damage), field(std::move(other.field)) {
+Gamefield::Gamefield(Gamefield&& other) noexcept : field_width(other.field_width), field_height(other.field_height), amount_of_damage(other.amount_of_damage), field(move(other.field)) {
   other.field_height = 0;
   other.field_width = 0;
 }
@@ -188,4 +188,47 @@ string Gamefield::gamefield_to_string() {
   }
   gamefield_string += "\n";
   return gamefield_string;
+}
+
+void Gamefield::load(string data) {
+  istringstream stream(data);
+  string line;
+   getline(stream, line);
+   if (line.find("sizes:") == 0) {
+    size_t pos = line.find(':') + 1;
+    if (pos != string::npos) {
+      istringstream size_stream(line.substr(pos));
+      size_stream >> field_width >> field_height;
+    }
+  }
+  getline(stream, line);
+  if (line.find("amount_of_damage:") == 0) {
+    // Извлечение количества урона
+    size_t pos = line.find(':') + 1;
+    if (pos != string::npos) {
+      amount_of_damage = stoi(line.substr(pos));
+    }
+  }
+  for (size_t y = 0; y < field_height; y++) {
+    for (size_t x = 0; x < field_width; x++) {
+      field[y][x] = new Cell();
+    }
+  }
+  getline(stream, line);
+  if (line.find("hits:") == 0) {
+    size_t pos = line.find(':') + 1;
+    if (pos != string::npos) {
+      string hits_str = line.substr(pos);
+      istringstream hit_stream(hits_str);
+      string cur_hit;
+      while (getline(hit_stream, cur_hit, ';')) {
+        if (!cur_hit.empty()) {
+          istringstream hit_pair(cur_hit);
+          int x, y;
+          hit_pair >> x >> y;
+          field_take_hit({x, y});
+        }
+      }
+    }
+  }
 }

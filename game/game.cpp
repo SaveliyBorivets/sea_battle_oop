@@ -12,21 +12,35 @@ Game::Game() {
 
 void Game::game_start() {
   game_state = new Game_state();
+  new_game();
+  while (true) {
+    rounds();
+    if (player_ship_manager->is_all_destroyed()) {
+      cout << "ПОРАЖЕНИЕ" << endl;
+      cout << "Начинаем новую игру!" << endl;
+      new_game();
+    } else {
+      cout << "ПОБЕДА" << endl;
+      cout << "Ищем нового противника" << endl;
+      player_ship_manager->remove_ships_from_field(player_gamefield);
+      player_ship_manager = new Ship_Manager(1, {3});
+      player_ship_manager->place_ships_on_field(player_gamefield);
+      computer_gamefield = new Gamefield(10, 10);
+      computer_ship_manager = new Ship_Manager(1, {3});
+      computer_ship_manager->place_ships_on_field(computer_gamefield);
+    }
+  }
+}
+
+void Game::new_game() {
   player_gamefield = new Gamefield(10, 10);
   computer_gamefield = new Gamefield(10, 10);
-  player_ship_manager = new Ship_Manager(2, {3, 3});
-  computer_ship_manager = new Ship_Manager(2, {3, 3});
+  player_ship_manager = new Ship_Manager(1, {3});
+  computer_ship_manager = new Ship_Manager(1, {3});
   player_ability_manager = new AbilityManager();
   player_ship_manager->place_ships_on_field(player_gamefield);
   computer_ship_manager->place_ships_on_field(computer_gamefield);
 }
-
-//void Game::game_end() {
-//  if (game_state->get_game_status() == FAILURE) {
-//    player_ship_manager->remove_ships_from_field(player_gamefield);
-//    computer_ship_manager->remove_ships_from_field(computer_gamefield);
-//  }
-//}
 
 void Game::game_save() {
   string answer;
@@ -40,6 +54,28 @@ void Game::game_save() {
   }
   if (answer == "Yes") {
     game_state->save_game_state(player_ship_manager, player_gamefield, player_ability_manager, computer_ship_manager, computer_gamefield);
+  }
+}
+
+void Game::game_load() {
+  string answer;
+  cout << "Хотите загрузить игру(Yes/No)?\n";
+  cin >> answer;
+  getchar();
+  while (answer != "No" && answer != "Yes") {
+    cout << "Некорректный ответ: " << answer << ". Хотите загрузить игру(Yes/No)?\n";
+    cin >> answer;
+    getchar();
+  }
+  if (answer == "Yes") {
+    game_state->load_game_state();
+    player_ship_manager->load(game_state->get_datapack(PLAYER_SHIP_MANAGER_DATA));
+    player_gamefield->load(game_state->get_datapack(PLAYER_GAMEFIELD_DATA));
+    player_ship_manager->place_ships_on_field(player_gamefield);
+    player_ability_manager->load(game_state->get_datapack(PLAYER_ABILITY_MANAGER_DATA));
+    computer_ship_manager->load(game_state->get_datapack(COMPUTER_SHIP_MANAGER_DATA));
+    computer_gamefield->load(game_state->get_datapack(COMPUTER_GAMEFIELD_DATA));
+    computer_ship_manager->place_ships_on_field(computer_gamefield);
   }
 }
 
@@ -71,12 +107,13 @@ void Game::computer_move() {
 void Game::rounds() {
   while (!player_ship_manager->is_all_destroyed() && !computer_ship_manager->is_all_destroyed()) {
     game_save();
+    game_load();
     player_move();
     if (!computer_ship_manager->is_all_destroyed()) {
       computer_move();
     }
   }
-  cout << "Игра закончилась!" << endl;
+  cout << "Раунд закончился!" << endl;
 }
 
 pair<int, int> Game::input_coordinates() {

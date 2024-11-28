@@ -9,6 +9,18 @@ Ship::Ship(size_t length) : ship_parts(length, nullptr) {
   }
 }
 
+Ship::Ship(size_t length, string status) : ship_parts(length, nullptr) {
+  istringstream stream(status);
+
+  ship_length = length;
+  destruction_flag = false;
+  int hp;
+  for (size_t i = 0; i < ship_length; i++) {
+    stream >> hp;
+    ship_parts[i] = new ShipPart(static_cast<HealthStatus>(hp));
+  }
+}
+
 // Вывод визуализированного состояния корабля
 void Ship::ship_status() {
   for (size_t i = 0; i < ship_length; i++) {

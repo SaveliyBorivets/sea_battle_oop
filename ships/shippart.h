@@ -24,7 +24,7 @@ class ShipPart {
   int hp;
   //pair <size_t, size_t> coords;
  public:
-  ShipPart();
+  ShipPart(HealthStatus health_status = UNTOUCHED);
   size_t get_hp();
   void part_status();
   void part_damage(int amount_of_damage);

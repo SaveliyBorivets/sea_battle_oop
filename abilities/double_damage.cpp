@@ -17,5 +17,5 @@ void DoubleDamage::use(pair<int, int> coords, Gamefield* gamefield) {
 }
 
 string DoubleDamage::ability_to_string() {
-  return "DoubleDamage";
+  return to_string(DOUBLE_DAMAGE);
 }

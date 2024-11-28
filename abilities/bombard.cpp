@@ -24,5 +24,5 @@ void Bombard::use(pair<int, int> coords, Gamefield* gamefield) {
 }
 
 string Bombard::ability_to_string() {
-  return "Bombard";
+  return to_string(BOMBARD);
 }

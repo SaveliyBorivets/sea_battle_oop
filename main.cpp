@@ -10,7 +10,6 @@ using namespace std;
 int main() {
   Game new_game;
   new_game.game_start();
-  new_game.rounds();
 //  Gamefield gamefield = Gamefield(10, 10);
 //  Ship_Manager ship_manager = Ship_Manager(2, {3, 3});
 //  ship_manager.place_ships_on_field(&gamefield);

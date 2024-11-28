@@ -33,9 +33,9 @@ void AbilityManager::add_random_ability() {
   srand(time(nullptr));
   int randomAbility = rand() % 3;
   switch (randomAbility) {
-    case 0: abilities.push_back(new DoubleDamage()); break;
-    case 1: abilities.push_back(new Scanner()); break;
-    case 2: abilities.push_back(new Bombard()); break;
+    case DOUBLE_DAMAGE: abilities.push_back(new DoubleDamage()); break;
+    case SCANNER: abilities.push_back(new Scanner()); break;
+    case BOMBARD: abilities.push_back(new Bombard()); break;
   }
   cout << "Получена новая способность!\n";
 }
@@ -47,4 +47,32 @@ string AbilityManager::ability_manager_to_string() {
   }
   ability_manager_string += "\n";
   return ability_manager_string;
+}
+
+void AbilityManager::load(string data) {
+  abilities.clear();
+  istringstream stream(data);
+  string line;
+  int abilities_amount = 0;
+  if (getline(stream, line)) {
+    size_t pos = line.find(':') + 1;
+    if (pos != string::npos) {
+      abilities_amount = stoi(line.substr(pos));
+    }
+  }
+  if (getline(stream, line)) {
+    istringstream ability_stream(line);
+    int ability;
+    while (ability_stream >> ability) {
+      switch (ability) {
+        case DOUBLE_DAMAGE: abilities.push_back(new DoubleDamage()); break;
+        case SCANNER: abilities.push_back(new Scanner()); break;
+        case BOMBARD: abilities.push_back(new Bombard()); break;
+        default: throw Load_error("Ошибка при загрузке: Нет способности" + to_string(ability));
+      }
+    }
+  }
+  if (abilities_amount != abilities.size()) {
+    throw Load_error("Ошибка при загрузке менеджера способностей");
+  }
 }
