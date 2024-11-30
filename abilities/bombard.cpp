@@ -22,3 +22,7 @@ void Bombard::use(pair<int, int> coords, Gamefield* gamefield) {
     gamefield->field_take_hit(all_shipcells_coords[hit_index]);
   }
 }
+
+string Bombard::ability_to_string() {
+  return to_string(BOMBARD);
+}

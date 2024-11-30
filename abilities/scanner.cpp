@@ -16,7 +16,15 @@ void Scanner::use(pair<int, int> coords, Gamefield* gamefield) {
         }
       }
     }
+  } else if (gamefield->prove_coords(coords)) {
+    if (gamefield->prove_shipcell(coords)) {
+      cout << "По координатам {" << coords.first << ", " << coords.second << "} найден сегмент корабля\n";
+    }
   } else {
     cout << "Выход за границы поля\n";
   }
+}
+
+string Scanner::ability_to_string() {
+  return to_string(SCANNER);
 }

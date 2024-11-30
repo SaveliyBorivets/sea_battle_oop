@@ -1,8 +1,8 @@
 #include "shippart.h"
 
 // Конструктор сегмента корабля
-ShipPart::ShipPart() {
-  hp = UNTOUCHED;
+ShipPart::ShipPart(HealthStatus health_status) {
+  hp = health_status;
 }
 
 // Получения количества очков здоровья

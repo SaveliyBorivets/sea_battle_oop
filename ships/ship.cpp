@@ -9,6 +9,18 @@ Ship::Ship(size_t length) : ship_parts(length, nullptr) {
   }
 }
 
+Ship::Ship(size_t length, string status) : ship_parts(length, nullptr) {
+  istringstream stream(status);
+
+  ship_length = length;
+  destruction_flag = false;
+  int hp;
+  for (size_t i = 0; i < ship_length; i++) {
+    stream >> hp;
+    ship_parts[i] = new ShipPart(static_cast<HealthStatus>(hp));
+  }
+}
+
 // Вывод визуализированного состояния корабля
 void Ship::ship_status() {
   for (size_t i = 0; i < ship_length; i++) {
@@ -37,7 +49,19 @@ vector<ShipPart*> Ship::get_ship_parts() {
   return ship_parts;
 }
 
+bool Ship::get_destruction_flag() {
+  return destruction_flag;
+}
+
 // Получение длины корабля
 size_t Ship::get_ship_length() {
   return ship_length;
+}
+
+string Ship::ship_to_string() {
+  string ship_string;
+  for (auto part : ship_parts) {
+    ship_string += to_string(part->get_hp()) + " ";
+  }
+  return ship_string;
 }

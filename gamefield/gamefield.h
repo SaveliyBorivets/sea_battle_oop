@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <iostream>
+#include <sstream>
 #include <algorithm>
 #include "cell.h"
 #include "../ships/ship.h"
@@ -11,10 +12,10 @@
 
 class Gamefield {
  private:
-  vector<vector<Cell*>> field;
   int field_width;
   int field_height;
   int amount_of_damage;
+  vector<vector<Cell*>> field;
  public:
   Gamefield(int width, int height);
   Gamefield(const Gamefield& other);//Копирование
@@ -31,7 +32,9 @@ class Gamefield {
   int get_field_width();
   int get_field_height();
   Cell* get_cell(pair<int, int> coords);
-  void print_gamefield(bool enemy_flag);
+  void print_gamefield(bool enemy_flag = false);
+  string gamefield_to_string();
+  void load(string data);
 };
 
 #endif //NAVAL_WARFARE__GAMEFIELD_H_

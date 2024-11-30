@@ -10,6 +10,8 @@ Ship_Manager::Ship_Manager(size_t amount, vector<int> ships_sizes) : ships_coord
       cout << "Некорректная длина:" << ships_lengths[i] << endl;
       ships_lengths[i] = input_length();
     }
+    input_orientation(i);
+    input_coordinates(i);
     ships.push_back(new Ship(ships_lengths[i]));
   }
 }
@@ -17,10 +19,8 @@ Ship_Manager::Ship_Manager(size_t amount, vector<int> ships_sizes) : ships_coord
 // Размещение кораблей на поле
 void Ship_Manager::place_ships_on_field(Gamefield* gamefield) {
   for (int i = 0; i < ship_amount; i++) {
-    input_orientation(i);
-    input_coordinates(i);
     while (!gamefield->place_ship(ships[i], ships_coords[i], ships_orientations[i])) {
-      cout << "Корабль не может быть выставлен по введенным данным, попробуйте еще раз" << endl;
+      cout << "Корабль длиной" << ships_lengths[i] << "не может быть выставлен по введенным координатам {" << ships_coords[i].first << ", " << ships_coords[i].second << "}, попробуйте еще раз" << endl;
       input_orientation(i);
       input_coordinates(i);
     }
@@ -123,6 +123,15 @@ void Ship_Manager::input_coordinates(size_t ship_ind) {
   }
 }
 
+bool Ship_Manager::is_all_destroyed() {
+  for (auto cur_ship : ships) {
+    if (!cur_ship->get_destruction_flag()) {
+      return false;
+    }
+  }
+  return true;
+}
+
 bool Ship_Manager::update_all_ship_destruction_flags() {
   for (auto cur_ship : ships) {
     if (cur_ship->update_destruction_flag()) {
@@ -130,4 +139,64 @@ bool Ship_Manager::update_all_ship_destruction_flags() {
     }
   }
   return false;
+}
+
+string Ship_Manager::ship_manager_to_string() {
+  string ship_manager_string;
+  ship_manager_string += "ship_amount:" + to_string(ship_amount) + "\n";
+  for (int i = 0; i < ship_amount; i++) {
+    ship_manager_string += "length:" + to_string(ships_lengths[i]) + "\n";
+    ship_manager_string += "coordinates:" + to_string(ships_coords[i].first) + " " + to_string(ships_coords[i].second) + "\n";
+    ship_manager_string += "orientation:" + to_string(ships_orientations[i]) + "\n";
+    ship_manager_string += "status:" + ships[i]->ship_to_string() + "\n";
+  }
+  return ship_manager_string;
+}
+
+void Ship_Manager::load(string data) {
+  ships_lengths.clear();
+  ships.clear();
+  ships_coords.clear();
+  ships_orientations.clear();
+
+  std::istringstream stream(data);
+  std::string line;
+  pair<int, int> coords;
+
+  getline(stream, line);
+  size_t pos = line.find(':') + 1;
+  if (pos != std::string::npos) {
+    ship_amount = std::stoi(line.substr(pos));
+  }
+  for (int i = 0; i < ship_amount; i++) {
+    getline(stream, line);
+    pos = line.find(':') + 1;
+    if (pos != std::string::npos) {
+      ships_lengths.push_back(stoi(line.substr(pos)));
+    }
+    getline(stream, line);
+    pos = line.find(':') + 1;
+    if (pos != std::string::npos) {
+      std::istringstream coord_stream(line.substr(pos));
+      coord_stream >> coords.first >> coords.second;
+      ships_coords.push_back(coords);
+    }
+    getline(stream, line);
+    pos = line.find(':') + 1;
+    if (pos != std::string::npos) {
+      switch (stoi(line.substr(pos))) {
+        case VERTICAL:
+          ships_orientations.push_back(VERTICAL);
+          break;
+        case HORIZONTAL:
+          ships_orientations.push_back(HORIZONTAL);
+          break;
+      }
+    }
+    getline(stream, line);
+    pos = line.find(':') + 1;
+    if (pos != std::string::npos) {
+      ships.push_back(new Ship(ships_lengths[i], line.substr(pos)));
+    }
+  }
 }

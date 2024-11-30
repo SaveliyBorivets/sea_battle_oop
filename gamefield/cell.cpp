@@ -45,6 +45,10 @@ bool Cell::is_shipcell() {
   return false;
 }
 
+bool Cell::is_hit() {
+  return hit_flag;
+}
+
 ShipPart* Cell::get_shippart() {
   return shipcell;
 }
