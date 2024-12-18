@@ -22,11 +22,8 @@ void Game::game_start() {
     } else {
       cout << "ПОБЕДА" << endl;
       cout << "Ищем нового противника" << endl;
-      player_ship_manager->remove_ships_from_field(player_gamefield);
-      player_ship_manager = new Ship_Manager(1, {3});
-      player_ship_manager->place_ships_on_field(player_gamefield);
       computer_gamefield = new Gamefield(10, 10);
-      computer_ship_manager = new Ship_Manager(1, {3});
+      computer_ship_manager = new Ship_Manager(1, {1});
       computer_ship_manager->place_ships_on_field(computer_gamefield);
     }
   }
@@ -35,8 +32,8 @@ void Game::game_start() {
 void Game::new_game() {
   player_gamefield = new Gamefield(10, 10);
   computer_gamefield = new Gamefield(10, 10);
-  player_ship_manager = new Ship_Manager(1, {3});
-  computer_ship_manager = new Ship_Manager(1, {3});
+  player_ship_manager = new Ship_Manager(1, {1});
+  computer_ship_manager = new Ship_Manager(1, {1});
   player_ability_manager = new AbilityManager();
   player_ship_manager->place_ships_on_field(player_gamefield);
   computer_ship_manager->place_ships_on_field(computer_gamefield);

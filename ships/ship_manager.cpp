@@ -27,6 +27,11 @@ void Ship_Manager::place_ships_on_field(Gamefield* gamefield) {
   }
 }
 
+//void Ship_Manager::random_place_ships_on_field(Gamefield* gamefield) {
+//  pair<int, int> random_coords;
+//  Orientation random_orientation;
+//}
+
 // Удаление кораблей с поля(корабли остаются в менеджере)
 void Ship_Manager::remove_ships_from_field(Gamefield* gamefield) {
   for (int i = 0; i < ship_amount; i++) {

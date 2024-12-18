@@ -84,3 +84,7 @@ void Game_state::clear() {
   computer_ship_manager_data.clear();
   computer_gamefield_data.clear();
 }
+
+string Game_state::get_path() {
+  return path_to_save_file;
+}

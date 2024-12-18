@@ -40,6 +40,7 @@ class Game_state {
   void save_game_state(Ship_Manager* PSM, Gamefield* PGF, AbilityManager* PAM, Ship_Manager* CSM, Gamefield* CGF);
   string get_datapack(Datapack datapack);
   void clear();
+  string get_path();
 };
 
 #endif //NAVAL_WARFARE_GAME_GAME_STATE_H_
